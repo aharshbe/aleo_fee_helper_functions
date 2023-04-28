@@ -6,7 +6,7 @@ sizeinkb(){
 	echo "$((${size} * .0000001)) KB"
 }
 
-# determine number of aleo credits
+# determine number of aleo credits based on file size
 aleocredits(){
 	sizeinkb | awk '{$1/=1024;printf "you should pay %.2f Aleo credits\n",$1}'
 }
