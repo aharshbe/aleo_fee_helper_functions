@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# determine size of file in kilobytes
+# determine size of file in kilobytes, `.` refers to your current directory; you can provide a relative or complete path here to any Leo application as an alternative
 sizeinkb(){
 	size=$(find . -type f -exec ls -l {} \; | awk '{sum += $5} END {print sum}') 
 	echo "$((${size} * .0000001)) KB"
