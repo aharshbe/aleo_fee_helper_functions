@@ -13,7 +13,7 @@ aleocredits(){
 
 # convert credits to gates
 convertcredits(){
-	sizeinkb | awk '{$1/=1024;printf "%.2f\n",$1}' | awk '{$1*=10000000;printf "your fee in gates is %.0f\n",$1}'
+	aleocredits | awk '{$1*=10000000;printf "your fee in gates is %.0f\n",$1}'
 }
 
 # list all fees
