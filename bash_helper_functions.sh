@@ -8,7 +8,7 @@ sizeinkb(){
 
 # determine number of aleo credits based on file size
 aleocredits(){
-	sizeinkb | awk '{$1/=1024;printf "you should pay %.2f Aleo credits\n",$1}'
+	sizeinkb | awk '{$1/=1024;printf "you should pay %.2f Aleo credits to execute\n",$1}'
 }
 
 # convert credits to gates
